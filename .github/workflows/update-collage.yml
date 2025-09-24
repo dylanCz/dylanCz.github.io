@@ -1,0 +1,32 @@
+name: Update Last.fm Collage
+
+on:
+  schedule:
+    - cron: "0 0 1 * *"  # Runs every month
+  workflow_dispatch:     # Allows manual triggering from GitHub UI
+
+jobs:
+  download-collage:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up date variable
+        id: date
+        run: echo "date=$(date -u +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
+      - name: Download Last.fm collage
+        run: |
+          mkdir -p images
+          curl -L "https://tapmusic.net/collage.php?user=masklessfm&type=1month&size=5x5&caption=true" \
+            -o "images/collage-${{ steps.date.outputs.date }}.jpg"
+          cp images/collage-${{ steps.date.outputs.date }}.jpg images/collage-latest.jpg
+
+      - name: Commit and push new collage
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add images/collage-*.jpg
+          git commit -m "Add collage for ${{ steps.date.outputs.date }}" || echo "No new collage to commit"
+          git push
