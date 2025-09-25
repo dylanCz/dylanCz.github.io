@@ -12,6 +12,12 @@ body {
         margin-right: 25%;
     }
 }
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
 a {
     color: #80CBC4;
     text-decoration: none;
