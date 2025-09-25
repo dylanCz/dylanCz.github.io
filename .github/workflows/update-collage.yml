@@ -21,7 +21,7 @@ jobs:
           mkdir -p images
           curl -L "https://tapmusic.net/collage.php?user=masklessfm&type=1month&size=5x5&caption=true" \
             -o "images/collage-${{ steps.date.outputs.date }}.jpg"
-          cp images/collage-${{ steps.date.outputs.date }}.jpg images/collage-latest.jpg
+          cp -f images/collage-${{ steps.date.outputs.date }}.jpg images/collage-latest.jpg
 
       - name: Commit and push new collage
         run: |
