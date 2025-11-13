@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     font-size: 16px;
     background-color: #212121;
-    color: #E0E0E0;
+    color: #e0e0e0;
     padding: 0 10px;
 }
 @media (min-width: 768px) {
@@ -13,13 +13,17 @@ body {
     }
 }
 @media print {
-  .no-print {
-    display: none !important;
-  }
+    .no-print {
+        display: none !important;
+    }
+    @page {
+        size: auto; /* auto is the initial value */
+        margin: 0mm; /* this affects the margin in the printer settings */
+    }
 }
 
 a {
-    color: #80CBC4;
+    color: #80cbc4;
     text-decoration: none;
 }
 
