@@ -2,8 +2,8 @@ name: Update Last.fm Collage
 
 on:
   schedule:
-    - cron: "0 0 1 * *"  # Runs every month
-  workflow_dispatch:     # Allows manual triggering from GitHub UI
+    - cron: "0 0 1 * *" # Runs every month
+  workflow_dispatch: # Allows manual triggering from GitHub UI
 
 jobs:
   download-collage:
@@ -20,8 +20,8 @@ jobs:
         run: |
           mkdir -p images
           curl -L "https://tapmusic.net/collage.php?user=masklessfm&type=1month&size=5x5&caption=true" \
-            -o "images/collage-${{ steps.date.outputs.date }}.jpg"
-          cp -f images/collage-${{ steps.date.outputs.date }}.jpg images/collage-latest.jpg
+            -o "images/collages/collage-${{ steps.date.outputs.date }}.jpg"
+          cp -f images/collages/collage-${{ steps.date.outputs.date }}.jpg images/collages/collage-latest.jpg
 
       - name: Commit and push new collage
         run: |
