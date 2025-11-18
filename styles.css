@@ -2,7 +2,7 @@
     font-family:
         Atkinson Hyperlegible,
         sans-serif;
-    font-size: 64px;
+    font-size: 50px;
     font-weight: bold;
     line-height: 1.2;
 }
@@ -108,12 +108,19 @@ body {
     margin-right: auto;
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 50px;
+}
+
 @media (max-width: 768px) {
     .intro {
         font-size: 32px;
     }
     .header {
-        font-size: 20px;
+        font-size: 22px;
     }
     .footer {
         font-size: 14px;
@@ -131,6 +138,10 @@ body {
     }
     .projectdesc {
         width: 100%;
+    }
+    .flex-container {
+        margin-top: 10%;
+        flex-direction: column;
     }
 }
 @media print {
