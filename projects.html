@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Dylan Clark</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdn.lineicons.com/5.0/lineicons.css"
+        />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </head>
+
+    <body>
+        <header class="header">
+            <div>
+                <a href="/" style="font-weight: bold">Dylan Clark</a>
+                <span style="float: right">
+                    <a href="about">About</a>&nbsp
+                    <a href="projects"><u>Projects</u></a
+                    >&nbsp <a href="resume">Resume</a></span
+                >
+            </div>
+            <br />
+        </header>
+
+        <div class="widecontent">
+            <div class="project-wrapper">
+                <div class="project-text">
+                    <p class="project-header">
+                        <a href="https://github.com/dylanCz/homelab">
+                            <b>Personal Homelab</b>
+                            <i class="lni lni-github"></i>
+                        </a>
+                    </p>
+                    My personal homelab built with Kubernetes.
+                    <br />
+                    <p class="extended">
+                        ArgoCD for GitOps <br />
+                        Pihole for ad blocking <br />
+                        Glance for a dashboard <br />
+                        Grafana for monitoring <br />
+                        Traefik for service DNS <br />
+                    </p>
+                </div>
+
+                <img
+                    class="project-image"
+                    src="images/projects/homelab.png"
+                    alt="Homelab"
+                />
+            </div>
+            <br />
+            <hr />
+            <br />
+            <div class="project-wrapper">
+                <div class="project-text">
+                    <p class="project-header">
+                        <a href="https://github.com/dylanCz/poke2pastes">
+                            <b>Stateless Pokepaste</b>
+                            <i class="lni lni-github"></i>
+                        </a>
+                    </p>
+                    A stateless implementation of
+                    <a
+                        style="color: blue"
+                        href="https://github.com/felixphew/pokepaste"
+                        >pokepaste</a
+                    >.
+                    <br />
+                    <p class="extended">
+                        PokePaste is a simple pastebin, with a clean interface,
+                        that supports highlighting of the syntax created by
+                        Pokemon Showdown. It encodes all of the data into the
+                        URL instead of storing in a database.
+                    </p>
+                </div>
+
+                <img
+                    class="project-image"
+                    src="images/projects/pokepaste.png"
+                    alt="Homelab"
+                />
+            </div>
+        </div>
+    </body>
+</html>

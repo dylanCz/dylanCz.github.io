@@ -23,15 +23,14 @@
     line-height: 1.4;
 }
 
-.projectheader {
+.project-header {
     font-family:
         Atkinson Hyperlegible,
         sans-serif;
     font-size: 26px;
-    /*line-height: 1.4;*/
 }
 
-.projectdesc {
+.project-text {
     font-family:
         Atkinson Hyperlegible,
         sans-serif;
@@ -41,11 +40,12 @@
 
 .project-wrapper {
     display: flex;
-    align-items: flex-start; /* Align top edges */
+    align-items: center; /* Align top edges */
     gap: 10px; /* Space between text and image */
+    justify-content: space-around;
 }
 
-.projectphoto {
+.project-image {
     width: 55%;
     /*height: 333px;*/
 }
@@ -134,15 +134,18 @@ body {
         margin-left: 0;
         margin-right: 0;
     }
-    .projectphoto {
-        visibility: hidden;
-    }
-    .projectdesc {
+    .project-image {
         width: 100%;
     }
-    .flex-container {
-        margin-top: 10%;
+    .project-text {
+        width: 100%;
+    }
+    .project-wrapper {
         flex-direction: column;
+        gap: 20px;
+    }
+    .extended {
+        font-size: 0;
     }
 }
 @media print {
