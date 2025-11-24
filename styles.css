@@ -147,6 +147,10 @@ body {
     .extended {
         font-size: 0;
     }
+    .flex-container {
+        margin-top: 10%;
+        flex-direction: column;
+    }
 }
 @media print {
     .no-print {
