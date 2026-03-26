@@ -40,12 +40,15 @@ a:hover {
 .header {
     font-size: 30px;
     margin: 15px;
+    margin-bottom: 4%;
 }
 .header-left {
     font-weight: bold;
 }
 .header-right {
     float: right;
+    display: flex;
+    gap: 30px;
 }
 
 /* ── Typography ── */
@@ -109,6 +112,13 @@ a:hover {
     white-space: nowrap;
 }
 
+.nav-toggle {
+    display: none;
+}
+.nav-burger {
+    display: none;
+}
+
 /* ── Responsive ── */
 @media (max-width: 768px) {
     .intro {
@@ -129,8 +139,31 @@ a:hover {
         text-align: center;
         float: none;
     }
+
+    .header-inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .nav-burger {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
     .header-right {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        padding: 10px 0;
         float: none;
+    }
+
+    .nav-toggle:checked + .nav-burger + .header-right {
+        display: flex;
     }
 
     .content {
