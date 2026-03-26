@@ -109,10 +109,17 @@ a:hover {
     margin-right: 5%;
 }
 
+.log-bullets {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
 .media-list {
     border-spacing: 20px 5px;
     border-collapse: separate;
     white-space: nowrap;
+    margin-left: -20px;
+    /*margin: 0 auto;*/
 }
 
 .nav-toggle {
@@ -190,6 +197,7 @@ a:hover {
     }
     .media-list {
         border-spacing: 5px 5px;
+        margin-left: -5px;
     }
 }
 
