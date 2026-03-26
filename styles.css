@@ -152,6 +152,9 @@ a:hover {
     .toc {
         display: none;
     }
+    .media-list {
+        border-spacing: 5px 5px;
+    }
 }
 
 /* ── Print ── */
