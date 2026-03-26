@@ -62,6 +62,9 @@ a:hover {
     font-size: 20px;
     line-height: 1.4;
 }
+.log {
+    font-size: 17px;
+}
 .project-header {
     font-size: 26px;
 }
