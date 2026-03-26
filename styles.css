@@ -2,9 +2,53 @@
     font-family:
         Atkinson Hyperlegible,
         sans-serif;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     line-height: 1.2;
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes bounceOut {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    40% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+}
+.stage {
+    display: flex;
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+}
+.word {
+    position: absolute;
+    opacity: 0;
+}
+.word.in {
+    animation: bounceIn 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+.word.out {
+    animation: bounceOut 0.35s ease-in forwards;
 }
 
 .about {
