@@ -9,23 +9,11 @@
             rel="stylesheet"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="./script.js"></script>
     </head>
+
     <body>
-        <header class="header no-print">
-            <div class="header-inner">
-                <a href="/" style="font-weight: bold">Dylan Clark</a>
-
-                <input type="checkbox" id="nav-toggle" class="nav-toggle" />
-                <label for="nav-toggle" class="nav-burger">&#9776;</label>
-
-                <nav class="header-right">
-                    <a href="about.html">About</a>
-                    <a href="projects.html">Projects</a>
-                    <a href="log.html">Log</a>
-                    <a href="resume.html"><u>Resume</u></a>
-                </nav>
-            </div>
-        </header>
+        <site-header></site-header>
 
         <div class="download-button no-print">
             <button onclick="window.print()">📄 Download PDF</button>
