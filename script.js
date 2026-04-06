@@ -3,7 +3,7 @@ customElements.define(
   class extends HTMLElement {
     connectedCallback() {
       this.innerHTML = `
-        <header class="header">
+        <header class="header no-print">
             <div class="header-inner">
                 <a href="/" class="header-left">Dylan Clark</a>
 
