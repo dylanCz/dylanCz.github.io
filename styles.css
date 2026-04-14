@@ -27,7 +27,7 @@ a:hover {
 
 /* ── Layout ── */
 .content {
-    margin: 0 25%;
+    margin: 0 20%;
 }
 
 /*Projects*/
@@ -217,7 +217,7 @@ a:hover {
     }
 
     .content {
-        margin: 0;
+        margin: 2%;
     }
 
     .project-image,
